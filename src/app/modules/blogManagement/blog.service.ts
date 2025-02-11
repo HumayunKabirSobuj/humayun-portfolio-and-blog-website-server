@@ -7,7 +7,7 @@ const addBlogDataIndoDB = async (payload: TBlog) => {
 };
 
 const getAllBlogDataFromDB = async () => {
-  const result = await Blog.find({ isDeleted: false });
+  const result = await Blog.find();
   return result;
 };
 
