@@ -33,10 +33,11 @@ const deleteBlogData = catchAsync(async (req, res) => {
   });
 });
 const updateBlogData = catchAsync(async (req, res) => {
+  // console.log(req.body);
   // console.log(req.body.BookId);
   // console.log(req.body.bookInfo);
   // console.log(req.body.id);
-  const result = await blogServices.updateBlogIntoDB(req.body.BlogId, req.body.blogInfo);
+  const result = await blogServices.updateBlogIntoDB(req.body.blogId, req.body.blogInfo);
   sendResponse(res, {
     statusCode: StatusCodes.OK,
     success: true,
