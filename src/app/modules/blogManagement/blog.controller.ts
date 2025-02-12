@@ -24,6 +24,7 @@ const getAllBlogData = catchAsync(async (req, res) => {
 const deleteBlogData = catchAsync(async (req, res) => {
   // console.log(req.body.id);
   const result = await blogServices.deletedBlogIntoDB(req.body.id);
+  // console.log(result);
   sendResponse(res, {
     statusCode: StatusCodes.OK,
     success: true,

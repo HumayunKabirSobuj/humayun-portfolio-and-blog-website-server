@@ -15,8 +15,8 @@ const deletedBlogIntoDB = async (id: string) => {
   const result = await Blog.findByIdAndDelete(id);
   return result;
 };
-const updateBlogIntoDB = async (id: string, bookInfo: Partial<TBlog>) => {
-  const result = await Blog.findByIdAndUpdate(id, { ...bookInfo });
+const updateBlogIntoDB = async (id: string, blogInfo: Partial<TBlog>) => {
+  const result = await Blog.findByIdAndUpdate(id, { ...blogInfo });
   return result;
 };
 export const blogServices = {

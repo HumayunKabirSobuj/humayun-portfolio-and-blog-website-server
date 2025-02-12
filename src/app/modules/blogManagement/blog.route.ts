@@ -8,4 +8,4 @@ router.get('/', blogController.getAllBlogData);
 router.delete('/delete-blog', blogController.deleteBlogData);
 router.put('/update-blog', blogController.updateBlogData);
 
-export const productRoutes = router;
+export const blogRoutes = router;
