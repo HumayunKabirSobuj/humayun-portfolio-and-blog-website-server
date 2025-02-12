@@ -23,7 +23,7 @@ const getAllProjectData = catchAsync(async (req, res) => {
   });
 });
 const deleteProjectData = catchAsync(async (req, res) => {
-  // console.log(req.body.id);
+  // console.log(req.body);
   const result = await projectServices.deletedProjectIntoDB(req.body.id);
   // console.log(result);
   sendResponse(res, {
