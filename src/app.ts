@@ -6,7 +6,6 @@ import router from './app/routes';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 
-
 const app: Application = express();
 
 // Middleware
@@ -14,9 +13,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ['http://localhost:3000'],
     credentials: true,
-  })
+  }),
 );
 app.use(bodyParser.json());
 
@@ -31,8 +30,6 @@ const test = async (req: Request, res: Response) => {
 };
 
 app.get('/', test);
-
-
 
 // Error handlers
 app.use(globalErrorHandler);
